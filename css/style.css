@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root{
+    --corFundo: rgb(50, 50, 50);
+    --corLetra: rgb(170, 170, 170);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    /* font-family: 'Roboto', 'sans-serif'; */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; /*DECLARAÇÃO SEGURA: Nesse exemplo, o navegador primeiro vai tentar colocar a "Trebuchet MS", caso não consiga vai tentar colocar a "Lucida Sans..." e assim por diante. WEB SAFE FONTS*/
+}
+
+body{
+    background-color: var(--corFundo);
+    color: var(--corLetra);
+    font-size: 1em; /*TAMANHO RELATIVO. Na fonte, 1em é igual a 1px, que é o tamanho padrão das letras. Nesse caso, a fonte é 1.1x maior que o normal*/
+}
+
+main, header{
+    padding: 10px;
+    max-width: 1200px;
+    min-width: 280px;
+    margin: auto; /* ISSO FAZ COM QUE A MAIN FIQUE NO CENTRO DA TELA. NÃO CENTRALIZA OS CONTEÚDOS DENTRO DELA*/
+}
+
+main section{
+    padding: 2%;
+}
+
+nav{
+    font-weight: bold;
+    width: 100%;
+}
+
+nav div{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.linkNav{
+    text-decoration: none;
+    color: var(--corLetra);
+    margin-right: 30px;
+    padding: 20px;
+}
+
+.linkNav:hover{
+    background-color: rgb(169, 35, 78);
+    transition: .6s;
+    border-radius: 10px;
+    color: white;
+}
+
+#logo{
+    width: 70px;
+    height: 70px;
+    padding-right: 40px;
+}
+
+h1, h3{ 
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+}
+
+.tituloMain{
+    font-size: 4em;
+}
+
+h2{
+    text-transform: uppercase;
+    padding: 20px 0 20px 0;
+}
+
+h4{
+    text-align: center;
+    text-transform: uppercase;
+}
+
+p{
+    text-align: justify;
+    text-indent: 40px; /*Coloca o espaço do início do parágrafo*/
+}
+
+#capa{
+    background-image: url(../img/eventRinglosBlackMarketRumble1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+    padding: 5% 0 25% 0;
+    width: 100%;
+}
+
+.videoMain{
+    max-width: 750px;
+    min-width: 280px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+
+.videoMain video{
+    width: 100%;
+    padding: 1%;
+}
+
+#personas{
+    padding: 5%;
+}
+
+#personas div{
+    margin: auto;
+    justify-content: center;
+    justify-content: center;
+}
+
+.gridPersonas{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 400px);
+    align-items: center;
+    justify-items: center;
+}
+
+.gridPersonas div{
+    width: 75%;
+    padding: 0 5px 70px 5px;
+    margin: 0;
+}
+
+.gridPersonas img{
+    width: 70px;
+    height: 70px;
+    margin: auto;
+    display: block;
+}
+
+button{
+    background: none;
+    color: white;
+    font-weight: bold;
+    border: 2px solid white;
+    border-radius: 8%;
+    padding: 0.7%;
+    text-align: center;
+    display: block;
+    margin: auto;
+}
+
+button:hover{
+    background-color: rgba(156, 1, 143, 0.521);
+    border: 2px solid rgb(156, 1, 143);
+    border-radius: 8%;
+    padding: 0.72%;
+    transition: 500ms;
+    cursor: pointer;
+}
+
+.imagePersona{
+    max-width: 100%;
+    min-width: 280px;
+    margin: 0 auto;
+    padding-bottom: 10px;
+    display: block;
+
+}
+
+.imagePersona:hover, .gridGaleria img:hover{
+    filter: opacity(70%);
+    transition: 0.5s;
+}
+
+.aviso{
+    color: rgb(255, 68, 68);
+    font-weight: bold;
+    font-size: 1em;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.gridGaleria{
+    width: 100% !important;
+    margin: 0 auto;
+    display: block;
+    padding-bottom: 30px;
+}
+
+.gridGaleria img{
+    max-width: 570px;
+    min-width: 280px;
+    padding-bottom: 5px;
+}
+
+#linkGaleriaHome{
+    display: none;
+}
+
+.videoGallery{
+    max-width: 1200px;
+    min-width: 280px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+
+.videoGallery video{
+    width: 100%;
+}
+
+@media (max-width: 1411px){
+    header{
+        display: none;
+    }
+
+    .gridGaleria img{
+        display: block;
+        margin: 0 auto;
+    }
+
+    #linkGaleriaHome{
+        display: block;
+    }
+
+    .videoGallery{
+        max-width: 750px;
+        min-width: 280px;
+        margin: 0 auto;
+        padding-bottom: 50px;
+    }
+    
+}
+
+@media (max-width: 650px){
+    header{
+        display: none;
+    }
+
+    .gridGaleria img{
+        display: block;
+        margin: 0 auto;
+        width: 450px;
+    }
+
+    main{
+        padding: 0;
+    }
+
+    
+}
