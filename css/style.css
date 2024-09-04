@@ -191,7 +191,7 @@ button:hover{
     padding-bottom: 30px;
 }
 
-.gridGaleria img{
+.gridGaleria img, .gridGaleria video{
     max-width: 570px;
     min-width: 280px;
     padding-bottom: 5px;
