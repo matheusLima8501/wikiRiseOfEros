@@ -240,7 +240,7 @@ button:hover{
         display: none;
     }
 
-    .gridGaleria img{
+    .gridGaleria img, .gridGaleria video{
         display: block;
         margin: 0 auto;
         width: 450px;
